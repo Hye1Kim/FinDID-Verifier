@@ -1,1 +1,1 @@
-# FinDID-Auth
+# FinDID-Verifier
