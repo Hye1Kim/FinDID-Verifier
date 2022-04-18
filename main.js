@@ -6,7 +6,7 @@ const PORT = 8000;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const crypto = require('crypto');
-const KlayDidClient = require('./did-auth/didAuth.js');
+const FinDIDClient = require('./did-auth/didAuth.js');
 const jwt = require('./lib/jwt.js');
 
 const access = require('./config/access');
@@ -28,23 +28,24 @@ app.accessKeyDB = new Map();
 
 app.post('/accessToken', async function(req, res) {
     const didInfo = req.body;
-    const uDid = req.body.didInfo;
-    const uPubKeyId = req.body.publicKeyId;
-    const signature = req.body.signature;
-    const data = JSON.stringify(req.body.data);
+    const uDid = didInfo.did;
+    const uPubKeyId = didInfo.publicKeyID;
+    const signature = didInfo.signature;
+    const data = JSON.stringify(didInfo.uDid);
 
-    const didAuthResult = await KlayDID.didAuth(uDid,uPubKeyId,signature,data)
+    const didAuthResult = await FinDIDClient.didAuth(uDid,uPubKeyId,signature,data)
     
     const isValid = didAuthResult;
 
-    if (!isValid) res.send("Error:The requestor's identity is not confirmed.");
+    if (!isValid) res.send("Error : The requestor's identity is not confirmed.");
 
     //accessToken과 endPoint 발급 
     const token = jwt.genJWT()
     console.log(token);
+    if(!token) res.send("Error : jwt not generated.");
+    
     app.accessKeyDB.set(token.accessToken, token.accessKey);
 
-    //acessPoint
     const accessPoint = {
         'accessToken':token.accessToken,
         'endPoint': access.ENDPOINT+'/claimProp'
@@ -56,13 +57,14 @@ app.post('/accessToken', async function(req, res) {
 });
 
 app.post('/claimProp', async function(req, res){
-    const accessToken = req.body;
+    const accessToken = req.body.accessToken; //accessToken
     const accessKey = app.accessKeyDB.get(accessToken);
 
     const isValid = jwt.verifyJWT(accessToken,accessKey);
 
     const claimProp = {}; // ui로 띄워야함 
-    res.send(claimProp);
+    const endPoint;
+    res.send(claimProp, endPoint);
 
 });
 

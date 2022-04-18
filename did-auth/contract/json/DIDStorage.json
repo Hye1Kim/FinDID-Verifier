@@ -31,14 +31,14 @@
     "absolutePath": "/home/pslab154/project/did-registry-dev/contracts/DIDStorage.sol",
     "exportedSymbols": {
       "DIDStorage": [
-        654
+        677
       ]
     },
-    "id": 655,
+    "id": 678,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 605,
+        "id": 628,
         "literals": [
           "solidity",
           ">=",
@@ -57,30 +57,30 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 654,
+        "id": 677,
         "linearizedBaseContracts": [
-          654
+          677
         ],
         "name": "DIDStorage",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 609,
+            "id": 632,
             "name": "documents",
             "nodeType": "VariableDeclaration",
-            "scope": 654,
+            "scope": 677,
             "src": "887:37:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Document_$653_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Document_$676_storage_$",
               "typeString": "mapping(string => struct DIDStorage.Document)"
             },
             "typeName": {
-              "id": 608,
+              "id": 631,
               "keyType": {
-                "id": 606,
+                "id": 629,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "895:6:1",
@@ -92,18 +92,18 @@
               "nodeType": "Mapping",
               "src": "887:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Document_$653_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Document_$676_storage_$",
                 "typeString": "mapping(string => struct DIDStorage.Document)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 607,
+                "id": 630,
                 "name": "Document",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 653,
+                "referencedDeclaration": 676,
                 "src": "905:8:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Document_$653_storage_ptr",
+                  "typeIdentifier": "t_struct$_Document_$676_storage_ptr",
                   "typeString": "struct DIDStorage.Document"
                 }
               }
@@ -113,21 +113,21 @@
           },
           {
             "constant": false,
-            "id": 613,
+            "id": 636,
             "name": "didState",
             "nodeType": "VariableDeclaration",
-            "scope": 654,
+            "scope": 677,
             "src": "930:36:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_DIDState_$625_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_DIDState_$648_$",
               "typeString": "mapping(string => enum DIDStorage.DIDState)"
             },
             "typeName": {
-              "id": 612,
+              "id": 635,
               "keyType": {
-                "id": 610,
+                "id": 633,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "938:6:1",
@@ -139,18 +139,18 @@
               "nodeType": "Mapping",
               "src": "930:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_DIDState_$625_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_DIDState_$648_$",
                 "typeString": "mapping(string => enum DIDStorage.DIDState)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 611,
+                "id": 634,
                 "name": "DIDState",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 625,
+                "referencedDeclaration": 648,
                 "src": "948:8:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_DIDState_$625",
+                  "typeIdentifier": "t_enum$_DIDState_$648",
                   "typeString": "enum DIDStorage.DIDState"
                 }
               }
@@ -160,21 +160,21 @@
           },
           {
             "constant": false,
-            "id": 617,
+            "id": 640,
             "name": "idType",
             "nodeType": "VariableDeclaration",
-            "scope": 654,
+            "scope": 677,
             "src": "972:32:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_IdType_$628_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_IdType_$651_$",
               "typeString": "mapping(string => enum DIDStorage.IdType)"
             },
             "typeName": {
-              "id": 616,
+              "id": 639,
               "keyType": {
-                "id": 614,
+                "id": 637,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "980:6:1",
@@ -186,18 +186,18 @@
               "nodeType": "Mapping",
               "src": "972:25:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_IdType_$628_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_IdType_$651_$",
                 "typeString": "mapping(string => enum DIDStorage.IdType)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 615,
+                "id": 638,
                 "name": "IdType",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 628,
+                "referencedDeclaration": 651,
                 "src": "990:6:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_IdType_$628",
+                  "typeIdentifier": "t_enum$_IdType_$651",
                   "typeString": "enum DIDStorage.IdType"
                 }
               }
@@ -207,10 +207,10 @@
           },
           {
             "constant": false,
-            "id": 621,
+            "id": 644,
             "name": "nonce",
             "nodeType": "VariableDeclaration",
-            "scope": 654,
+            "scope": 677,
             "src": "1010:36:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -219,9 +219,9 @@
               "typeString": "mapping(string => uint256)"
             },
             "typeName": {
-              "id": 620,
+              "id": 643,
               "keyType": {
-                "id": 618,
+                "id": 641,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "1018:6:1",
@@ -237,7 +237,7 @@
                 "typeString": "mapping(string => uint256)"
               },
               "valueType": {
-                "id": 619,
+                "id": 642,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "1028:4:1",
@@ -252,22 +252,22 @@
           },
           {
             "canonicalName": "DIDStorage.DIDState",
-            "id": 625,
+            "id": 648,
             "members": [
               {
-                "id": 622,
+                "id": 645,
                 "name": "None",
                 "nodeType": "EnumValue",
                 "src": "1072:4:1"
               },
               {
-                "id": 623,
+                "id": 646,
                 "name": "Active",
                 "nodeType": "EnumValue",
                 "src": "1078:6:1"
               },
               {
-                "id": 624,
+                "id": 647,
                 "name": "Deactivated",
                 "nodeType": "EnumValue",
                 "src": "1086:11:1"
@@ -279,16 +279,16 @@
           },
           {
             "canonicalName": "DIDStorage.IdType",
-            "id": 628,
+            "id": 651,
             "members": [
               {
-                "id": 626,
+                "id": 649,
                 "name": "User",
                 "nodeType": "EnumValue",
                 "src": "1117:4:1"
               },
               {
-                "id": 627,
+                "id": 650,
                 "name": "Service",
                 "nodeType": "EnumValue",
                 "src": "1123:7:1"
@@ -300,14 +300,14 @@
           },
           {
             "canonicalName": "DIDStorage.PublicKey",
-            "id": 637,
+            "id": 660,
             "members": [
               {
                 "constant": false,
-                "id": 630,
+                "id": 653,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 637,
+                "scope": 660,
                 "src": "1164:9:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -316,7 +316,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 629,
+                  "id": 652,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1164:6:1",
@@ -330,10 +330,10 @@
               },
               {
                 "constant": false,
-                "id": 632,
+                "id": 655,
                 "name": "keyType",
                 "nodeType": "VariableDeclaration",
-                "scope": 637,
+                "scope": 660,
                 "src": "1183:14:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -342,7 +342,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 631,
+                  "id": 654,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1183:6:1",
@@ -356,10 +356,10 @@
               },
               {
                 "constant": false,
-                "id": 634,
+                "id": 657,
                 "name": "pubKeyData",
                 "nodeType": "VariableDeclaration",
-                "scope": 637,
+                "scope": 660,
                 "src": "1207:17:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -368,7 +368,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 633,
+                  "id": 656,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1207:6:1",
@@ -382,10 +382,10 @@
               },
               {
                 "constant": false,
-                "id": 636,
+                "id": 659,
                 "name": "disable",
                 "nodeType": "VariableDeclaration",
-                "scope": 637,
+                "scope": 660,
                 "src": "1234:12:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -394,7 +394,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 635,
+                  "id": 658,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "1234:4:1",
@@ -409,20 +409,20 @@
             ],
             "name": "PublicKey",
             "nodeType": "StructDefinition",
-            "scope": 654,
+            "scope": 677,
             "src": "1138:115:1",
             "visibility": "public"
           },
           {
             "canonicalName": "DIDStorage.Document",
-            "id": 653,
+            "id": 676,
             "members": [
               {
                 "constant": false,
-                "id": 639,
+                "id": 662,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1461:9:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -431,7 +431,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 638,
+                  "id": 661,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1461:6:1",
@@ -445,10 +445,10 @@
               },
               {
                 "constant": false,
-                "id": 642,
+                "id": 665,
                 "name": "contexts",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1480:17:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -458,7 +458,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 640,
+                    "id": 663,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1480:6:1",
@@ -467,7 +467,7 @@
                       "typeString": "string"
                     }
                   },
-                  "id": 641,
+                  "id": 664,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "1480:8:1",
@@ -481,36 +481,36 @@
               },
               {
                 "constant": false,
-                "id": 645,
+                "id": 668,
                 "name": "publicKeys",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1560:22:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_PublicKey_$637_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_PublicKey_$660_storage_$dyn_storage_ptr",
                   "typeString": "struct DIDStorage.PublicKey[]"
                 },
                 "typeName": {
                   "baseType": {
                     "contractScope": null,
-                    "id": 643,
+                    "id": 666,
                     "name": "PublicKey",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 637,
+                    "referencedDeclaration": 660,
                     "src": "1560:9:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_PublicKey_$637_storage_ptr",
+                      "typeIdentifier": "t_struct$_PublicKey_$660_storage_ptr",
                       "typeString": "struct DIDStorage.PublicKey"
                     }
                   },
-                  "id": 644,
+                  "id": 667,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "1560:11:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_PublicKey_$637_storage_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_PublicKey_$660_storage_$dyn_storage_ptr",
                     "typeString": "struct DIDStorage.PublicKey[]"
                   }
                 },
@@ -519,10 +519,10 @@
               },
               {
                 "constant": false,
-                "id": 647,
+                "id": 670,
                 "name": "svcType",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1592:14:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -531,7 +531,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 646,
+                  "id": 669,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1592:6:1",
@@ -545,10 +545,10 @@
               },
               {
                 "constant": false,
-                "id": 649,
+                "id": 672,
                 "name": "svcEndPoint",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1632:18:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -557,7 +557,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 648,
+                  "id": 671,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1632:6:1",
@@ -571,10 +571,10 @@
               },
               {
                 "constant": false,
-                "id": 652,
+                "id": 675,
                 "name": "credentials",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1676:20:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -584,7 +584,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 650,
+                    "id": 673,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1676:6:1",
@@ -593,7 +593,7 @@
                       "typeString": "string"
                     }
                   },
-                  "id": 651,
+                  "id": 674,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "1676:8:1",
@@ -608,12 +608,12 @@
             ],
             "name": "Document",
             "nodeType": "StructDefinition",
-            "scope": 654,
+            "scope": 677,
             "src": "1436:267:1",
             "visibility": "public"
           }
         ],
-        "scope": 655,
+        "scope": 678,
         "src": "35:1672:1"
       }
     ],
@@ -623,14 +623,14 @@
     "absolutePath": "/home/pslab154/project/did-registry-dev/contracts/DIDStorage.sol",
     "exportedSymbols": {
       "DIDStorage": [
-        654
+        677
       ]
     },
-    "id": 655,
+    "id": 678,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 605,
+        "id": 628,
         "literals": [
           "solidity",
           ">=",
@@ -649,30 +649,30 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 654,
+        "id": 677,
         "linearizedBaseContracts": [
-          654
+          677
         ],
         "name": "DIDStorage",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 609,
+            "id": 632,
             "name": "documents",
             "nodeType": "VariableDeclaration",
-            "scope": 654,
+            "scope": 677,
             "src": "887:37:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Document_$653_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Document_$676_storage_$",
               "typeString": "mapping(string => struct DIDStorage.Document)"
             },
             "typeName": {
-              "id": 608,
+              "id": 631,
               "keyType": {
-                "id": 606,
+                "id": 629,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "895:6:1",
@@ -684,18 +684,18 @@
               "nodeType": "Mapping",
               "src": "887:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Document_$653_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Document_$676_storage_$",
                 "typeString": "mapping(string => struct DIDStorage.Document)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 607,
+                "id": 630,
                 "name": "Document",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 653,
+                "referencedDeclaration": 676,
                 "src": "905:8:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Document_$653_storage_ptr",
+                  "typeIdentifier": "t_struct$_Document_$676_storage_ptr",
                   "typeString": "struct DIDStorage.Document"
                 }
               }
@@ -705,21 +705,21 @@
           },
           {
             "constant": false,
-            "id": 613,
+            "id": 636,
             "name": "didState",
             "nodeType": "VariableDeclaration",
-            "scope": 654,
+            "scope": 677,
             "src": "930:36:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_DIDState_$625_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_DIDState_$648_$",
               "typeString": "mapping(string => enum DIDStorage.DIDState)"
             },
             "typeName": {
-              "id": 612,
+              "id": 635,
               "keyType": {
-                "id": 610,
+                "id": 633,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "938:6:1",
@@ -731,18 +731,18 @@
               "nodeType": "Mapping",
               "src": "930:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_DIDState_$625_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_DIDState_$648_$",
                 "typeString": "mapping(string => enum DIDStorage.DIDState)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 611,
+                "id": 634,
                 "name": "DIDState",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 625,
+                "referencedDeclaration": 648,
                 "src": "948:8:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_DIDState_$625",
+                  "typeIdentifier": "t_enum$_DIDState_$648",
                   "typeString": "enum DIDStorage.DIDState"
                 }
               }
@@ -752,21 +752,21 @@
           },
           {
             "constant": false,
-            "id": 617,
+            "id": 640,
             "name": "idType",
             "nodeType": "VariableDeclaration",
-            "scope": 654,
+            "scope": 677,
             "src": "972:32:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_IdType_$628_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_IdType_$651_$",
               "typeString": "mapping(string => enum DIDStorage.IdType)"
             },
             "typeName": {
-              "id": 616,
+              "id": 639,
               "keyType": {
-                "id": 614,
+                "id": 637,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "980:6:1",
@@ -778,18 +778,18 @@
               "nodeType": "Mapping",
               "src": "972:25:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_IdType_$628_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_enum$_IdType_$651_$",
                 "typeString": "mapping(string => enum DIDStorage.IdType)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 615,
+                "id": 638,
                 "name": "IdType",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 628,
+                "referencedDeclaration": 651,
                 "src": "990:6:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_IdType_$628",
+                  "typeIdentifier": "t_enum$_IdType_$651",
                   "typeString": "enum DIDStorage.IdType"
                 }
               }
@@ -799,10 +799,10 @@
           },
           {
             "constant": false,
-            "id": 621,
+            "id": 644,
             "name": "nonce",
             "nodeType": "VariableDeclaration",
-            "scope": 654,
+            "scope": 677,
             "src": "1010:36:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -811,9 +811,9 @@
               "typeString": "mapping(string => uint256)"
             },
             "typeName": {
-              "id": 620,
+              "id": 643,
               "keyType": {
-                "id": 618,
+                "id": 641,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "1018:6:1",
@@ -829,7 +829,7 @@
                 "typeString": "mapping(string => uint256)"
               },
               "valueType": {
-                "id": 619,
+                "id": 642,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "1028:4:1",
@@ -844,22 +844,22 @@
           },
           {
             "canonicalName": "DIDStorage.DIDState",
-            "id": 625,
+            "id": 648,
             "members": [
               {
-                "id": 622,
+                "id": 645,
                 "name": "None",
                 "nodeType": "EnumValue",
                 "src": "1072:4:1"
               },
               {
-                "id": 623,
+                "id": 646,
                 "name": "Active",
                 "nodeType": "EnumValue",
                 "src": "1078:6:1"
               },
               {
-                "id": 624,
+                "id": 647,
                 "name": "Deactivated",
                 "nodeType": "EnumValue",
                 "src": "1086:11:1"
@@ -871,16 +871,16 @@
           },
           {
             "canonicalName": "DIDStorage.IdType",
-            "id": 628,
+            "id": 651,
             "members": [
               {
-                "id": 626,
+                "id": 649,
                 "name": "User",
                 "nodeType": "EnumValue",
                 "src": "1117:4:1"
               },
               {
-                "id": 627,
+                "id": 650,
                 "name": "Service",
                 "nodeType": "EnumValue",
                 "src": "1123:7:1"
@@ -892,14 +892,14 @@
           },
           {
             "canonicalName": "DIDStorage.PublicKey",
-            "id": 637,
+            "id": 660,
             "members": [
               {
                 "constant": false,
-                "id": 630,
+                "id": 653,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 637,
+                "scope": 660,
                 "src": "1164:9:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -908,7 +908,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 629,
+                  "id": 652,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1164:6:1",
@@ -922,10 +922,10 @@
               },
               {
                 "constant": false,
-                "id": 632,
+                "id": 655,
                 "name": "keyType",
                 "nodeType": "VariableDeclaration",
-                "scope": 637,
+                "scope": 660,
                 "src": "1183:14:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -934,7 +934,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 631,
+                  "id": 654,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1183:6:1",
@@ -948,10 +948,10 @@
               },
               {
                 "constant": false,
-                "id": 634,
+                "id": 657,
                 "name": "pubKeyData",
                 "nodeType": "VariableDeclaration",
-                "scope": 637,
+                "scope": 660,
                 "src": "1207:17:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -960,7 +960,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 633,
+                  "id": 656,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1207:6:1",
@@ -974,10 +974,10 @@
               },
               {
                 "constant": false,
-                "id": 636,
+                "id": 659,
                 "name": "disable",
                 "nodeType": "VariableDeclaration",
-                "scope": 637,
+                "scope": 660,
                 "src": "1234:12:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -986,7 +986,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 635,
+                  "id": 658,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "1234:4:1",
@@ -1001,20 +1001,20 @@
             ],
             "name": "PublicKey",
             "nodeType": "StructDefinition",
-            "scope": 654,
+            "scope": 677,
             "src": "1138:115:1",
             "visibility": "public"
           },
           {
             "canonicalName": "DIDStorage.Document",
-            "id": 653,
+            "id": 676,
             "members": [
               {
                 "constant": false,
-                "id": 639,
+                "id": 662,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1461:9:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1023,7 +1023,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 638,
+                  "id": 661,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1461:6:1",
@@ -1037,10 +1037,10 @@
               },
               {
                 "constant": false,
-                "id": 642,
+                "id": 665,
                 "name": "contexts",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1480:17:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1050,7 +1050,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 640,
+                    "id": 663,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1480:6:1",
@@ -1059,7 +1059,7 @@
                       "typeString": "string"
                     }
                   },
-                  "id": 641,
+                  "id": 664,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "1480:8:1",
@@ -1073,36 +1073,36 @@
               },
               {
                 "constant": false,
-                "id": 645,
+                "id": 668,
                 "name": "publicKeys",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1560:22:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_PublicKey_$637_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_PublicKey_$660_storage_$dyn_storage_ptr",
                   "typeString": "struct DIDStorage.PublicKey[]"
                 },
                 "typeName": {
                   "baseType": {
                     "contractScope": null,
-                    "id": 643,
+                    "id": 666,
                     "name": "PublicKey",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 637,
+                    "referencedDeclaration": 660,
                     "src": "1560:9:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_PublicKey_$637_storage_ptr",
+                      "typeIdentifier": "t_struct$_PublicKey_$660_storage_ptr",
                       "typeString": "struct DIDStorage.PublicKey"
                     }
                   },
-                  "id": 644,
+                  "id": 667,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "1560:11:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_PublicKey_$637_storage_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_PublicKey_$660_storage_$dyn_storage_ptr",
                     "typeString": "struct DIDStorage.PublicKey[]"
                   }
                 },
@@ -1111,10 +1111,10 @@
               },
               {
                 "constant": false,
-                "id": 647,
+                "id": 670,
                 "name": "svcType",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1592:14:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1123,7 +1123,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 646,
+                  "id": 669,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1592:6:1",
@@ -1137,10 +1137,10 @@
               },
               {
                 "constant": false,
-                "id": 649,
+                "id": 672,
                 "name": "svcEndPoint",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1632:18:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1149,7 +1149,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 648,
+                  "id": 671,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "1632:6:1",
@@ -1163,10 +1163,10 @@
               },
               {
                 "constant": false,
-                "id": 652,
+                "id": 675,
                 "name": "credentials",
                 "nodeType": "VariableDeclaration",
-                "scope": 653,
+                "scope": 676,
                 "src": "1676:20:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1176,7 +1176,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 650,
+                    "id": 673,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1676:6:1",
@@ -1185,7 +1185,7 @@
                       "typeString": "string"
                     }
                   },
-                  "id": 651,
+                  "id": 674,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "1676:8:1",
@@ -1200,12 +1200,12 @@
             ],
             "name": "Document",
             "nodeType": "StructDefinition",
-            "scope": 654,
+            "scope": 677,
             "src": "1436:267:1",
             "visibility": "public"
           }
         ],
-        "scope": 655,
+        "scope": 678,
         "src": "35:1672:1"
       }
     ],
@@ -1219,10 +1219,10 @@
     "1001": {
       "events": {},
       "links": {},
-      "address": "0x7f52b1cc5614ee412aece2cf089c2ff76b24f4bf",
-      "transactionHash": "0x3a7d3f1578b21d54b3d82d3137477f17a1ea895cb74695988b0f35e1347a8858"
+      "address": "0xc6bc2f50aadc20c8f56e3da9c8d633826cbce21f",
+      "transactionHash": "0x41fc59dbb65e4161660291df0728007dd652bc2b3713be92f5e8401db81b4fa8"
     }
   },
   "schemaVersion": "2.0.2",
-  "updatedAt": "2022-04-15T07:15:34.665Z"
+  "updatedAt": "2022-04-17T07:35:40.079Z"
 }
