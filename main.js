@@ -9,7 +9,7 @@ const crypto = require('crypto');
 const FinDIDClient = require('./did-auth/didAuth.js');
 const jwt = require('./lib/jwt.js');
 
-const access = require('./config/access');
+const ACCESS = require('./config/access');
 
 app.use(express.static('upload'));
 app.use(cors());
@@ -48,7 +48,7 @@ app.post('/accessToken', async function(req, res) {
 
     const accessPoint = {
         'accessToken':token.accessToken,
-        'endPoint': access.ENDPOINT+'/claimProp'
+        'endPoint': ACCESS.VERIFIER+'/claimProp'
     }
     res.send(accessPoint);
       
@@ -61,6 +61,7 @@ app.post('/claimProp', async function(req, res){
     const accessKey = app.accessKeyDB.get(accessToken);
 
     const isValid = jwt.verifyJWT(accessToken,accessKey);
+    if(!isValid) res.send('Not Valid Access Token');
 
     const claimProp = {}; // ui로 띄워야함 
     const endPoint;
