@@ -3,3 +3,4 @@ config/access.js
 config/account.js
 config/contract.js
 test_function.js
+did-auth

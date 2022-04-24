@@ -1,13 +1,11 @@
 const express = require('express');
 const fileUpload = require('express-fileupload');
-const fs = require('fs');
 const app = express();
 const PORT = 8000;
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const crypto = require('crypto');
-const FinDIDClient = require('./did-auth/didAuth.js');
-const jwt = require('./lib/jwt.js');
+const finDID= require('fin-did-auth');/*@dev*/
+const jwt = require('access-jwt'); /*@dev*/
 
 const ACCESS = require('./config/access');
 
@@ -27,20 +25,31 @@ app.get('/ping', function(req, res) {
 app.accessKeyDB = new Map();
 
 app.post('/accessToken', async function(req, res) {
+    console.log('########/accessToken#######');
+    console.log(req.body);
     const didInfo = req.body;
     const uDid = didInfo.did;
     const uPubKeyId = didInfo.publicKeyID;
     const signature = didInfo.signature;
-    const data = JSON.stringify(didInfo.uDid);
+    const data = JSON.stringify(didInfo.did);
+    const exp = '60000ms';
 
-    const didAuthResult = await FinDIDClient.didAuth(uDid,uPubKeyId,signature,data)
+    const authInfo = {
+        'pubKey': {'keyType':didInfo.keyType,'pubKeyData' :didInfo.publicKey},
+        'signature':signature,
+        
+
+    }
+
+    const didAuthResult = await finDID.didAuth({ 'keyType':didInfo.keyType,'pubKeyData' :didInfo.publicKey},signature,data)
     
     const isValid = didAuthResult;
+    console.log(didAuthResult);
 
     if (!isValid) res.send("Error : The requestor's identity is not confirmed.");
 
     //accessToken과 endPoint 발급 
-    const token = jwt.genJWT()
+    const token = await jwt.genJWT(exp,didInfo)
     console.log(token);
     if(!token) res.send("Error : jwt not generated.");
     
@@ -57,40 +66,35 @@ app.post('/accessToken', async function(req, res) {
 });
 
 app.post('/claimProp', async function(req, res){
+    console.log('########/claimProp#######');
+    console.log(req.body);
     const accessToken = req.body.accessToken; //accessToken
     const accessKey = app.accessKeyDB.get(accessToken);
 
-    const isValid = jwt.verifyJWT(accessToken,accessKey);
+    const isValid = await jwt.verifyJWT(accessToken,accessKey);
     if(!isValid) res.send('Not Valid Access Token');
 
-    const claimProp = {}; // ui로 띄워야함 
-    const endPoint;
-    res.send(claimProp, endPoint);
+    const claimProp = {}; // ui로 띄워야함
+    const result = {
+        'claimProp':'알아서 보내쇼',
+        'endPoint': ACCESS.VERIFIER+'/vp'
+    }
+    res.send(result);
 
 });
 
-app.post('/vp', async function(req, res) {  
-  console.log('req.files >>>', req.files); // eslint-disable-line
+app.post('/vp', async function(req, res) {
+  console.log('########/vp#######');
+  console.log('req>> ' ,req.body);
 
-  let vp = req.files.sampleFile;
-
-  let vpPath = __dirname+'/vp/'+vp.name;
+  const vp = req.body.vp
   
-  vp.mv(vpPath, function(err) {
-    if (err) {
-      return res.status(500).send(err);
-    }
-
-  });
-  if (!req.files || Object.keys(req.files).length === 0) {
-    res.status(400).send('No vp');
-    return;
-  }
-
-  let vpJson = require(vpPath);
-  console.log(vpJson);
-
   //vp 검증 시작 
+
+  //1) vp signature 검증
+  const vpSig = vp.signature;
+
+
 
   res.send('success');
 
